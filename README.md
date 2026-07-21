@@ -28,7 +28,7 @@ Outputs:
 Clone the git repository:
 
 ```bash
-git clone git@git-ce.rwth-aachen.de:ltt/opt/ents_casting.git
+git clone git@github.com:RWTH-LTT/ents_casting.git
 ```
 
 Create the venv:
