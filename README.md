@@ -1,8 +1,8 @@
-# ents_casting: Long-term scenario generation and short-term stochastic forecasting for energy systems
+# ents_casting: Long-term scenario generation and short-term stochastic forecasting for weather-dependent energy systems
 
-ents_casting generates long-term scenarios for different weather years based on measured data from a single year. The long-term scenarios are derived from historical weather data. They can be used to analyze the behavior of an energy system under different weather conditionds.
+`ents_casting` generates long-term scenarios for different weather years based on measured data from a single year and historical weather data. The long-term scenarios can be used to analyze the behavior of an energy system under different weather conditions.
 
-Furthermore, it generates realistically accurate stochastic forecasts which are made at the start of each day. The stochastic forecasts are made at the start of each day with synthetic weather forecasts. Weather forecast accuracy is derived from historical weather forecast errors. With the stochastic forecasts, the energy system operation can be realistically simulated or different operation methods can be benchmarked.
+Furthermore, `ents_casting` generates realistically accurate stochastic forecasts. The stochastic forecasts are made at the start of each day in the long-term scenarios based on synthetic weather forecasts. Weather forecast accuracy is derived from historical weather forecasts. With the stochastic forecasts, the energy system operation can be simulated and different operation methods can be benchmarked.
 
 Currently supported time series parameters:
 
@@ -43,7 +43,7 @@ Activate the venv:
 source ./venv_s2_mpc/bin/activate
 ```
 
-Install ents_casting and all required packages:
+Install `ents_casting` and all required packages:
 
 ```bash
 pip install -e ./ents_casting
@@ -79,7 +79,7 @@ When using many (>10) weather years, API limitations may lead to errors during t
 
 ## Authorship and contributions
 
-ents_casting has been developed by the following contributors at the Institute of Technical Thermodynamics, RWTH Aachen University:
+`ents_casting` has been developed at the Institute of Technical Thermodynamics (RWTH Aachen University) by:
 
 - Benedict Brosius
 - Jan Wilberg
@@ -87,10 +87,10 @@ ents_casting has been developed by the following contributors at the Institute o
 
 ## Citation
 
-If 'ents_casting' supports your scientific work, please cite:
+If `ents_casting` supports your scientific work, please cite:
 
 Brosius, B., Zoeller, J., Zoellmann, M., Helders, S., Nilges, B., Schricker, H., & von der Assen, N. (2026). *Model predictive control of smart energy systems with seasonal storage: Mitigating the end-of-horizon effect via stochastic dynamic programming*. Energy Conversion and Management: X. <https://doi.org/10.1016/j.ecmx.2026.102138>
 
 ## License
 
-This project is published under the BSD 3-Clause License. For license terms, read the LICENSE file.
+[BSD 3-Clause License](https://github.com/RWTH-LTT/ents_casting/blob/main/LICENSE)
