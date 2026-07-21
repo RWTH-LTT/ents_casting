@@ -1,4 +1,4 @@
-# ents_casting: Long-term scenario generation and short-term stochastic forecasting for weather-dependent energy systems
+## What is ents_casting?
 
 `ents_casting` generates long-term scenarios for different weather years based on measured data from a single year and historical weather data. The long-term scenarios can be used to analyze the behavior of an energy system under different weather conditions.
 
