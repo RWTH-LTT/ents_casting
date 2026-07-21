@@ -65,7 +65,7 @@ python -m ents_casting
 
 The main script runs, in order:
 
-1. Download the weather data for the specified weather years and locations.
+1. Download the historical weather data for the specified weather years and locations.
 2. Download the historical weather forecasts.
 3. Train the LightGBM forecast models, including k-fold cross-validation.
 4. Generate the long-term scenarios for the specified weather years using the trained LightGBM models.
@@ -75,7 +75,7 @@ The main script runs, in order:
 8. Train the AR error models for residuals between the LightGBM forecasts and measured data.
 9. Generate the short-term forecasts for each day of the long-term scenarios and plot the stochastic forecasts.
 
-When using many (>10) weather years, API limitations may lead to errors during the downloading of weather data. In that case, reduce the number of historical weather years and download the data in multiple steps.
+When using many (>10) historical weather years, API limitations may lead to errors when downloading the weather data. In that case, reduce the number of locations for which the weather data should be downloaded. In this way, you can download the data in multiple steps.
 
 ## Authorship and contributions
 
