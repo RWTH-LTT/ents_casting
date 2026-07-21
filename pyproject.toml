@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ents_casting"
+version = "0.1.0"
+description = "Generate long-terms scenarios and short-term forecasts for energy system time series parameters."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "BSD-3-Clause" }
+authors = [
+    { name = "Benedict Brosius" },
+    { name = "Jan Wilberg" },
+    { name = "Judith Zoeller" },
+    { name = "Mats Zoellmann" },
+    { name = "Stefan Helders" },
+    { name = "Benedikt Nilges" },
+    { name = "Hendrik Schricker" },
+    { name = "Niklas von der Assen" }
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "pvlib",
+    "pyyaml",
+    "lightgbm",
+    "optuna",
+    "scikit-learn",
+    "matplotlib",
+    "openmeteo_requests",
+    "requests_cache",
+    "retry_requests"
+]
+
+[tool.ents_casting.authors]
+people = [
+    { name = "Benedict Brosius", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Jan Wilberg", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Judith Zoeller", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Mats Zoellmann", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Stefan Helders", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Benedikt Nilges", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Hendrik Schricker", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" },
+    { name = "Niklas von der Assen", affiliation = "Institute of Technical Thermodynamics, RWTH Aachen University" }
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["ents_casting"]

@@ -1,0 +1,101 @@
+# Contains configuration parameters for forecasting
+
+# Parameters to generate long-term scenarios and stochastic forecasts for
+time_series_parameters:
+  - wind_local # Predicted with wind turbine power curve, not with LightGBM
+  - pv_local # Predicted with main_location weather
+  - demand_el # Predicted with main_location weather
+  - demand_heat # Predicted with main_location weather
+  - demand_cold # Predicted with main_location weather
+  - price_el # Predicted with main_location, onshore_location, and offshore_location weather
+  - emission_el # Predicted with main_location, onshore_location, and offshore_location weather
+
+# Training years for each time series parameter
+training_years:
+  pv_local: 2023
+  demand_el: 2023
+  demand_heat: 2023
+  demand_cold: 2023
+  price_el: 2024
+  emission_el: 2024
+
+# number of days per cross-validation fold for training the prediction models. For each fold, a new prediction model is
+# trained without using the data of that fold. This allows to evaluate the accuracy of the prediction model and to avoid
+# bias of the prediction model to the training data.
+n_days_per_cross_validation_fold: 31
+
+# Historical years, from which the long-term scenarios should be generated
+historical_weather_start_year: 2020
+historical_weather_end_year: 2024
+
+# Date range for downloading historical weather forecasts
+historical_forecast_start_date: 2025-01-01
+historical_forecast_end_date: 2025-12-31
+
+# Number of stochastic forecasts which are created
+n_forecasts: 5
+
+# Location of case study
+# 50.085 8.841: Honda Research Institute Europe GmbH, Germany
+# 54.7833 9.4333 # Flensburg, Germany
+main_location: 50.085 8.841
+
+# Weather parameters from main location
+main_params:
+  - temperature_2m
+  - direct_normal_irradiance # DNI
+  - shortwave_radiation # GHI
+  - wind_speed_10m
+  - wind_speed_100m
+
+# Locations from which weather data should be used for electricity price and emission factor forecasting
+onshore_locations:
+  - 51.5704 12.9920
+  # - 50.2027 7.5177
+  # - 52.6147 10.4755
+  # - 48.4407 9.0984
+  # - 52.2487 7.6828
+  # - 48.4712 11.9041
+  # - 51.1508 9.8550
+  # - 53.9260 9.4522
+  # - 53.3962 12.8010
+  # - 49.9021 10.9713
+offshore_locations:
+  - 54.82 13.85  # Baltic Eagle
+
+# Weather parameters that should be used for each onshore location
+onshore_params:
+  - temperature_2m
+  - direct_normal_irradiance # DNI
+  - shortwave_radiation # GHI
+  - wind_speed_100m
+offshore_params:
+  - wind_speed_100m
+
+# Public holidays (YYYY-MM-DD) for all training years and the year for which the long-term scenarios are generated
+holidays:
+- 2023-01-01  # New Year's Day
+- 2023-04-07  # Good Friday
+- 2023-04-10  # Easter Monday
+- 2023-05-01  # Labor Day
+- 2023-05-18  # Ascension Day
+- 2023-05-29  # Whit Monday
+- 2023-06-08  # Corpus Christi
+- 2023-10-03  # German Unity Day
+- 2023-11-01  # All Saints' Day
+- 2023-12-24  # Christmas
+- 2023-12-25  # Christmas Day
+- 2023-12-26  # Second Day of Christmas
+- 2023-12-31  # New Year's Eve
+- 2024-01-01  # New Year's Day
+- 2024-03-29  # Good Friday
+- 2024-04-01  # Easter Monday
+- 2024-05-01  # Labor Day
+- 2024-05-09  # Ascension Day
+- 2024-05-20  # Whit Monday
+- 2024-05-30  # Corpus Christi
+- 2024-10-03  # German Unity Day
+- 2024-12-24  # Christmas
+- 2024-12-25  # Christmas Day
+- 2024-12-26  # Second Day of Christmas
+- 2024-12-31  # New Year's Eve
