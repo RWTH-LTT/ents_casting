@@ -40,7 +40,7 @@ python3 -m venv ./venv_s2_mpc
 Activate the venv:
 
 ```bash
-source ./venv_s2_mpc/bin/activate
+. venv_s2_mpc/Scripts/activate
 ```
 
 Install `ents_casting` and all required packages:
