@@ -1,8 +1,8 @@
 ## What is ents_casting?
 
-`ents_casting` generates long-term scenarios for different weather years based on measured data from a single year and historical weather data. The long-term scenarios can be used to analyze the behavior of an energy system under different weather conditions.
+`ents_casting` generates long-term scenarios for different weather years based on measured data of a single year and historical weather data. The long-term scenarios can be used to analyze the energy system operation under various weather conditions.
 
-Furthermore, `ents_casting` generates realistically accurate stochastic forecasts. The stochastic forecasts are made at the start of each day in the long-term scenarios based on synthetic weather forecasts. Weather forecast accuracy is derived from historical weather forecasts. With the stochastic forecasts, the energy system operation can be simulated and different operation methods can be benchmarked.
+For each day in the long-term scenarios, `ents_casting` generates a stochastic forecast of time series parameters with a forecast horizon of 6 days. The stochastic forecasts are based on synthetic weather forecasts, which mimic the accuracy of historical weather forecasts. With the stochastic forecasts, the energy system operation can be simulated and different operation methods can be benchmarked, e.g., with [s2_mpc](https://github.com/RWTH-LTT/s2_mpc).
 
 Currently supported time series parameters:
 
@@ -87,7 +87,7 @@ When using many (>10) historical weather years, API limitations may lead to erro
 
 ## Citation
 
-If `ents_casting` supports your scientific work, please cite:
+If `ents_casting` supports your research, please cite:
 
 Brosius, B., Zoeller, J., Zoellmann, M., Helders, S., Nilges, B., Schricker, H., & von der Assen, N. (2026). *Model predictive control of smart energy systems with seasonal storage: Mitigating the end-of-horizon effect via stochastic dynamic programming*. Energy Conversion and Management: X. <https://doi.org/10.1016/j.ecmx.2026.102138>
 
